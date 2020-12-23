@@ -1,0 +1,38 @@
+{
+   "require": {
+      "firebase\/php-jwt": "^3.0",
+      "vlucas\/phpdotenv": "3.3",
+      "alcaeus\/liquibase": "3.5.0",
+      "mpdf\/mpdf": "^6.1",
+      "phpmailer\/phpmailer": "^5.2",
+      "phalcon/incubator": "^3.2"
+   },
+   "require-dev": {
+      "phalcon\/devtools": "dev-master",
+      "bonndan\/release-manager": "0.5.*"
+   },
+   "extra": {
+      "rmt": {
+         "vcs": "git",
+         "prerequisites": [
+            "working-copy-check",
+            "display-last-changes"
+         ],
+         "preReleaseActions": [
+            {
+               "name": "version-stamp",
+               "const": "versioon"
+            },
+            "composer-update",
+            "changelog-update",
+            "changelog-render"
+         ],
+         "versionPersister": "composer",
+         "postReleaseActions": [
+            "vcs-commit",
+            "vcs-tag"
+         ]
+      }
+   },
+   "version": "0.0.1"
+}
