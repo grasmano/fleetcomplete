@@ -1,0 +1,1 @@
+Unpack the archive and run index.php file in your browser.
